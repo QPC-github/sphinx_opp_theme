@@ -56,35 +56,6 @@ $(function() {
         });
     }
 
-    function styleMdlCodeBlock() {
-        $('pre').hover(function() {
-            $(this).attr('click-to-copy', 'click to copy...');
-        });
-        $('pre').click(function(){
-            var result = copyClipboard(this);
-            if (result) {
-                $(this).attr('click-to-copy', 'copied!');
-            }
-        });
-    }
-
-    function copyClipboard(selector) {
-        var body = document.body;
-        if(!body) return false;
-
-        var $target = $(selector);
-        if ($target.length === 0) { return false; }
-
-        var text = $target.text();
-        var textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        var result = document.execCommand('copy');
-        document.body.removeChild(textarea);
-        return result;
-    }
-
     function quickSearchClickEvent() {
         const $breadcrumb = $('.breadcrumb');
 
@@ -99,7 +70,6 @@ $(function() {
         });
     }
 
-    // styleMdlCodeBlock();
     styleColorTextPrimary();
     reconstructionDrawerGlobalToc();
     collapse();
@@ -138,43 +108,4 @@ $(function() {
         });
     });
 
-    $('a.download').each(function() {
-        // button
-        var button = document.createElement('button');
-        button.className = 'download mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect';
-
-        // icon
-        var icon = document.createElement('i');
-        icon.className = 'material-icons';
-        var text = document.createTextNode('file_download');
-        icon.appendChild(text);
-        button.appendChild(icon);
-
-        // link
-        var link = $(this).attr('href');
-        button.onclick = function() {
-            window.location = link;
-        };
-        var fileName = link.split("/").slice(-1).pop();
-        if (fileName) {
-            button.id = fileName.replace('.', '-');
-        } else {
-            button.id = 'download-button-' + $(this).index();
-        }
-
-        // hint
-        var hint = document.createElement('div');
-        hint.className = 'mdl-tooltip';
-        hint.setAttribute('data-mdl-for', button.id);
-        var hintText = $(this).find('span.pre').map(function() {
-            return $(this).text();
-        }).get().join(' ');
-        hint.innerHTML = hintText;
-
-        componentHandler.upgradeElement(button);
-        $(this).remove();
-        var header = $('.section h1').first();
-        header.append(button);
-        header.append(hint);
-    });
 });
