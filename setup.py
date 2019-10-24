@@ -1,19 +1,19 @@
 from setuptools import setup
-from mxtheme import __version__
+from opptheme import __version__
 
 setup(
-    name = 'mxtheme',
+    name = 'opptheme',
     version = __version__,
     author = 'Mu Li',
     author_email= '',
-    url="https://github.com/mli/mx-theme",
+    url="https://github.com/omnetpp/sphinx_opp_theme",
     description='A Sphinx theme based on Material Design, adapted from sphinx_materialdesign_theme',
-    packages = ['mxtheme'],
+    packages = ['opptheme'],
     include_package_data=True,
     license= 'MIT License',
     entry_points = {
         'sphinx.html_themes': [
-            'mxtheme = mxtheme',
+            'opptheme = opptheme',
         ]
     },
 )

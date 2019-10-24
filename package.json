@@ -1,6 +1,6 @@
 {
-  "name": "mxtheme",
-  "version": "0.3.9",
+  "name": "opptheme",
+  "version": "0.4.0",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "npm-run-all build:parcel",
-    "build:parcel": "parcel build src/js/sphinx_materialdesign_theme.js -d mxtheme/static",
+    "build:parcel": "parcel build src/js/sphinx_materialdesign_theme.js -d opptheme/static",
     "build:example": "rimraf _build && sphinx-build -b html example _build",
     "release": "npm-run-all build:parcel release:package release:pypi",
     "release:noupload": "npm-run-all build:parcel release:package",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/myyasuda/sphinx_materialdesign_theme.git"
+    "url": "git+https://github.com/omnetpp/sphinx_opp_theme.git"
   },
   "author": "myyasuda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/myyasuda/sphinx_materialdesign_theme/issues"
+    "url": "https://github.com/omnetpp/sphinx_opp_theme/issues"
   },
-  "homepage": "https://github.com/myyasuda/sphinx_materialdesign_theme#readme",
+  "homepage": "https://github.com/omnetpp/sphinx_opp_theme#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",

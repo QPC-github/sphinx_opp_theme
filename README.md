@@ -5,7 +5,7 @@
 - Install the theme by
 
 ```bash
-pip install mxtheme
+pip install opptheme
 ```
 
 - Modify the `conf.py` for your sphinx project by
@@ -13,7 +13,7 @@ pip install mxtheme
 create a submodule of this repo on the same folder with `conf.py` for your sphinx project. then modify the following three lines in `conf.py`:
 
 ```python
-html_theme = 'mxtheme'
+html_theme = 'opptheme'
 ```
 
 In addition, to use the `card` directive in rst, you can and add the following two lines into your `def setup(app)` function:
@@ -21,8 +21,8 @@ In addition, to use the `card` directive in rst, you can and add the following t
 ```python
 def setup(app):
     ...
-    import mxtheme
-    app.add_directive('card', mxtheme.CardDirective)
+    import opptheme
+    app.add_directive('card', opptheme.CardDirective)
 ```
 
 ## How to build

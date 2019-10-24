@@ -6,7 +6,7 @@ pardir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(pardir)
 sys.path.append(pardir)
 
-from mxtheme  import __version__
+from opptheme  import __version__
 
 source_suffix = '.rst'
 master_doc = 'index'
@@ -28,7 +28,7 @@ html_sidebars = {
 html_favicon = '_static/favicon.ico'
 html_logo = '_static/logo.png'
 
-html_theme = 'mxtheme'
+html_theme = 'opptheme'
 html_theme_path = ['../']
 
 html_theme_options = {
